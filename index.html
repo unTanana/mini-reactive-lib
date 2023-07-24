@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<meta>
+</meta>
+
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <h1>
+        state1:
+        <span stateId="leState" />
+    </h1>
+    <button onclick="setter(getter() + 1)">state 1 Add 1</button>
+
+    <br />
+
+    <h1>
+        state2:
+        <span stateId="leState2" />
+    </h1>
+    <button onclick="setter2(getter2() + 1)">state 2Add 1</button>
+
+    <p>State 1: <span stateId="leState" /></p>
+</body>
+
+</html>
+
+<script>
+    const [getter, setter] = createState("leState", 1);
+    const [getter2, setter2] = createState("leState2", -1);
+</script>
