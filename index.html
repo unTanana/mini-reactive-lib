@@ -12,24 +12,27 @@
 <body>
     <h1>
         state1:
-        <span stateId="leState" />
+        <span stateId="age" />
     </h1>
-    <button onclick="setter(getter() + 1)">state 1 Add 1</button>
+    <button onclick="setAge(getAge() + 1)">state 1 Add 1</button>
 
     <br />
 
     <h1>
         state2:
-        <span stateId="leState2" />
+        <span stateId="nameState" />
     </h1>
-    <button onclick="setter2(getter2() + 1)">state 2Add 1</button>
+    <button onclick="setName('Gica')">set Gica</button>
+    <input stateId="nameState" type="text" oninput="setName(this.value)" />
 
-    <p>State 1: <span stateId="leState" /></p>
+    <p>State 1: <span stateId="age" /></p>
+
+    <a href="hello.html" />Hello</a>
 </body>
 
 </html>
 
 <script>
-    const [getter, setter] = createState("leState", 1);
-    const [getter2, setter2] = createState("leState2", -1);
+    const [getAge, setAge] = createState("age", 1);
+    const [getName, setName] = createState("nameState", "Petru");
 </script>
